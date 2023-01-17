@@ -35,8 +35,8 @@ inputs:
     description: 'Name of the repo'
     required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  pr_url:
+    description: 'The url of the newly created PR'
 runs:
   using: 'docker'
   image: 'Dockerfile'

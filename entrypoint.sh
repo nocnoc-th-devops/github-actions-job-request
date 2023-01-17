@@ -32,4 +32,4 @@ curl \
   -d "{\"title\":\"Automation Request for $JOB_NAME\",\"body\":\"Please review these changes!\",\"head\":\"features/$JOB_NAME\",\"base\":\"development\"}" > resp.json
 
 pr_url=`cat resp.json | jq '.url'`
-echo "PR_URL=$pr_url" >> $GITHUB_OUTPUT
+echo "pr_url=$pr_url" >> $GITHUB_OUTPUT
