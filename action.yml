@@ -1,6 +1,6 @@
 # action.yml
-name: 'Job Request'
-description: 'Add action scripts to repository'
+name: 'ntd - job Request'
+description: 'ntd - add action scripts to repository'
 inputs:
   attachment-urls: 
     description: 'Comma separated list of urls of the scripts to be added'
@@ -42,3 +42,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.script-urls }}
+branding:
+  icon: arrow-up-circle
+  color: blue
