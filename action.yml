@@ -1,0 +1,44 @@
+# action.yml
+name: 'Job Request'
+description: 'Add action scripts to repository'
+inputs:
+  attachment-urls: 
+    description: 'Comma separated list of urls of the scripts to be added'
+    required: true
+  git-basic-authen-url: 
+    description: 'The base URL after basic authen info is added'
+    required: true
+    default: 'https://john:doe@github.com'
+  git-base-url: 
+    description: 'The base URL of the git server'
+    required: true
+    default: 'https://github.com'
+  git-repo: 
+    description: 'The URL of the repo'
+    required: true
+    default: 'https://github.com/org/abc'
+  git-branch: 
+    description: 'Name of the base branch'
+    required: true
+    default: 'development'
+  job-name: 
+    description: 'Name of the job'
+    required: true
+    default: 'john-doe'
+  token: 
+    description: 'The GITHUB PAT'
+    required: true
+  git-repo-owner: 
+    description: 'Owner of the repo'
+    required: true
+  git-repo-name: 
+    description: 'Name of the repo'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.script-urls }}

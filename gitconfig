@@ -1,0 +1,5 @@
+[user]
+	name = DevOps Automation
+	email = 
+[url "GIT_BASIC_AUTHEN_URL/"]
+	insteadOf = GIT_BASE_URL/
